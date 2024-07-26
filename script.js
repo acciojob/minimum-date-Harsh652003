@@ -13,7 +13,7 @@ function minDate(dates) {
 
     return earliest;
 }
-console.log(minDate(dates))
+
 
 
 

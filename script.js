@@ -3,9 +3,16 @@ function minDate(dates) {
 	    if (dates.length === 0) {
         return null;  // Handle the case where the array is empty
     }
-    return dates.reduce((earliest, current) => current < earliest ? current : earliest);
-}
 
+    let earliest = dates[0];  
+    for (let i = 1; i < dates.length; i++) {
+        if (dates[i] < earliest) {
+            earliest = dates[i];
+        }
+    }
+
+    return earliest;
+}
 console.log(minDate(dates))
 
 
